@@ -1,0 +1,49 @@
+{% extends 'food/base.html' %}
+
+{% block title %}Pizzas{% endblock %}
+
+{% block content %}
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 text-center">
+                <h2 class="title">Our Pizzas</h2>
+                <div class="row">
+                    {% for pizza in pizzas %}
+                    <div class="col-md-4 p-4">
+                        <img class="picture" src="{{ pizza.pImage }}" alt="">
+                        <h4 class="pt-3" id="piz{{ pizza.id }}">{{ pizza.name }}</h4>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="pizza{{ pizza.id }}" value="{{ pizza.priceM }}" checked>
+                                {{ pizza.priceM }} $
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="pizza{{ pizza.id }}" value="{{ pizza.priceL }}">
+                                {{ pizza.priceL }} $
+                            </label>
+                        </div>
+                        <div>
+                            <button class="btn-info mt-3">Add to cart</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-4 order">
+                <h2 class="text-center">Order List</h2>
+                <ul></ul>
+                <h4 class="text-right">Total: 0 $</h4>
+            </div>
+        </div>
+    </div>
+
+    
+    
+        
+    
+
+{% endblock %}
