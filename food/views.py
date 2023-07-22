@@ -7,6 +7,10 @@ def index(request):
     ctx = {'active_link': 'index'}
     return render(request, 'food/index.html', ctx)
 
+def order(request):
+    ctx = {'active_link': 'order'}
+    return render(request, 'food/order.html', ctx)
+
 def pizzas(request):
     pizzas = Pizza.objects.all()
     ctx = {'pizzas': pizzas, 'active_link': 'pizza'}

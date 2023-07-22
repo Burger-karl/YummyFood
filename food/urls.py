@@ -6,5 +6,6 @@ app_name = 'food'
 urlpatterns = [
     path('pizza', views.pizzas, name='pizzas'),
     path('burger', views.burgers, name='burgers'),
+    path('order', views.order, name='order'),
 
 ]

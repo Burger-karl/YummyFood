@@ -28,4 +28,22 @@
 .order {
     position: relative;
     top: 100px;
+    line-height: 200%;
+}
+
+.del {
+    position: absolute;
+    right: 30px;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+li {
+    display: flex;
 }
