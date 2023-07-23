@@ -44,7 +44,7 @@ function pshoppingCart() {
     var orders = JSON.parse(localStorage.getItem('orders'));
     var total = localStorage.getItem('total');
     var cartSize = orders.length;
-    pcart.innerHTML = '';
+    pcart.innerHTML = ''
     for (let i = 0; i < cartSize; i++) {
         butt = '<div class="del" onclick="removePizza(' + i + ')">x</div>';
         pcart.innerHTML += '<li>'+ orders[i][0] + ' ' + orders[i][1] + ': ' + orders[i][2] + ' $' + butt + '</li>'; 

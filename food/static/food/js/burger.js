@@ -44,7 +44,7 @@ function bshoppingCart() {
     var orders = JSON.parse(localStorage.getItem('orders'));
     var total = localStorage.getItem('total');
     var cartSize = orders.length;
-    bcart.innerHTML = "";
+    bcart.innerHTML = ''
     for (let i = 0; i < cartSize; i++) {
         butt = '<div class="del" onclick="removeBurger(' + i + ')">x</div>';
         bcart.innerHTML += '<li>'+ orders[i][0] + ' ' + orders[i][1] + ': ' + orders[i][2] + ' $' + butt + '</li>'; 

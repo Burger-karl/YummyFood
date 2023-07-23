@@ -47,3 +47,20 @@
 li {
     display: flex;
 }
+
+/* .formal {
+    position: absolute;
+    top: 0;
+    left:  0;
+    width: 100%;
+    height: 130vh;
+    background-image: url("../img/burger-bg.jpg");
+    background-size: contain;
+    background-position: center center;
+    z-index: -1;
+
+} */
+
+#id_username, #id_email {
+    background-color: white;
+}
